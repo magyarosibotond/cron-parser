@@ -2,6 +2,8 @@
 
 A sample Swift CLI application for parsing simplified crojobs and calculating when the next job should run.
 
+No dependencies were used, not even Apple Swift frameworks that help with command line scripts (ArgumentParser, etc ...).
+
 **Sample input**
 
 ```
@@ -9,6 +11,15 @@ A sample Swift CLI application for parsing simplified crojobs and calculating wh
 45 * /bin/run_me_hourly
 * * /bin/run_me_every_minute
 * 19 /bin/run_me_sixty_times
+```
+
+Should return the following result using 16:10 as a parameter.
+
+```
+1:30 tomorrow - /bin/run_me_daily
+16:45 today - /bin/run_me_hourly
+16:10 today - /bin/run_me_every_minute
+19:00 today - /bin/run_me_sixty_times
 ```
 
 ## Usage
