@@ -30,3 +30,11 @@ while let line = readLine(), !line.isEmpty {
     }
 }
 
+let manager = CronJobManager(jobs: cronJobs)
+let schedules = manager.schedules(withTime: time)
+
+// Print results
+
+for schedule in schedules {
+    print(String(format: "%d:%02d %@ - %@", schedule.hour, schedule.minute, schedule.day.rawValue, schedule.command))
+}

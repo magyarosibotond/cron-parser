@@ -1,3 +1,5 @@
+import Foundation
+
 struct CronJob: Equatable {
     let hour: Int?
     let minute: Int?
